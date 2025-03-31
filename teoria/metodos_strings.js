@@ -21,8 +21,18 @@
 // console.log(frase.slice(-8))
 
 // .trim() elimina espacios al principio y final //
-let nomCompleto = "    javi er        "
-console.log(nomCompleto)
-console.log(nomCompleto.trim())
+// let nomCompleto = "    javi er        "
+// console.log(nomCompleto)
+// console.log(nomCompleto.trim())
 
-// .split() //
+// .split() divide un string en partes y responde como un array //
+// let saludo = "hola, chau"
+// console.log(saludo.split(" "))
+// let arrayNew = saludo.split("pe")
+// console.log(arrayNew)
+
+
+// .replace() remplaza una parte del string por otra //
+let frase = "me encanta Java"
+let fraseNew = frase.replace("Java", "Python")
+console.log(fraseNew)
