@@ -25,3 +25,45 @@
 //     console.log(edades[i])
 // }
 
+// agregar elementos a un array //
+
+// let notas = [8, 9, 5, 7]
+// console.log(notas)
+// notas[4] =10
+// console.log(notas)
+// notas[notas.length] = 11;
+// console.log(notas)
+
+// for(let i = 0; i < notas.length; i++){
+//     console.log(notas[i])
+// }
+
+// extraer un elemento de un array a una variable //
+
+// let nombre = ["pepe", "papa", "popo"]
+// let nomElegido = nombre[1]
+// console.log(nomElegido)
+
+
+// extraer todos los elementos para algo específico //
+// let numeros = [10, 20, 30, 40, 50]
+// let sumNumeros = 0
+
+// for (let i = 0; i < numeros.length; i++) {
+//     sumNumeros += numeros[i];
+// }
+
+// console.log(sumNumeros)
+// let promedio = sumNumeros / numeros.length
+// console.log(promedio)
+
+// encontrar el mayor o menor //
+
+// let numeros = [10, 1, 22, 4, 40];
+
+// let menor = numeros[0];
+// for (let i = 0; i < numeros.length; i++) {
+//     if (numeros[i] < menor)
+//         menor = numeros[i];
+// }
+// console.log(menor)
