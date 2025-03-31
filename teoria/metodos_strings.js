@@ -21,17 +21,8 @@
 // console.log(frase.slice(-8))
 
 // .trim() elimina espacios al principio y final //
-
-
-
+let nomCompleto = "    javi er        "
+console.log(nomCompleto)
+console.log(nomCompleto.trim())
 
 // .split() //
-
-
-
-
-
-
-
-
-
