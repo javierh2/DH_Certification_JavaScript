@@ -33,6 +33,6 @@
 
 
 // .replace() remplaza una parte del string por otra //
-let frase = "me encanta Java"
-let fraseNew = frase.replace("Java", "Python")
-console.log(fraseNew)
+// let frase = "me encanta Java"
+// let fraseNew = frase.replace("Java", "Python")
+// console.log(fraseNew)
