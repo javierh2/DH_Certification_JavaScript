@@ -8,7 +8,7 @@ let persona = {
         return "hola, estoy con JS y soy " + this.nombre;
     }
 };
-
+persona.nombre = "Juan";
 // acceder a las propiedades de un obj //
 console.log(persona.nombre,persona.apelido, "tiene",persona.edad,"años y le gusta",persona.gustos[0],"y hacer",persona.gustos[1])
 
@@ -22,10 +22,9 @@ delete persona.edad
 // console.log(persona)
 
 // acceder a un metodo de un obj //
-saludo = persona.saludar()
+let saludo = persona.saludar()
 // console.log(saludo)
 
 // this .ayuda en acceder a propiedades//
 console.log(saludo)
-persona.nombre = "Juan";
-console.log(saludo)
+// console.log(saludo)
