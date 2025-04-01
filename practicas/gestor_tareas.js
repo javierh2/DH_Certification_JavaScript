@@ -1,33 +1,37 @@
 const prompt = require("prompt-sync")({sigint: true });
+
+// arrays de tareas creadas //
 let tareas = [];
-let categoriasnombres = [
+
+// agregado de categorias
+let categoriasNombres = [
     "Trabajo",
     "Personal",
-    // agregado de categorias
+
 ];
 
 // funcion de categorias
-function mostrarcategorias(){
+function mostrarCategorias(){
     console.log("Categorias existentes: ");
-    categoriasnombres.forEach(function(categoria, indice){
+    categoriasNombres.forEach(function(categoria, indice){
         console.log(indice + ": " + categoria);
     });
 }
 
 // funcion de carga nuevas categorias
-function agregarcategoria(nombrecategoria){
-    categoriasnombres.push(nombrecategoria);
-    console.log("categoria " + nombrecategoria + " agregado correctamente");
+function agregarCategoria(nombreCategoria){
+    categoriasNombres.push(nombreCategoria);
+    console.log("categoria " + nombreCategoria + " agregado correctamente");
 }
 
 //funcion para agregar una nueva tarea al array
-function agregartarea(nombrerecibido, fechalimiterecibida = null){
-    tareas.push({nombre : nombrerecibido , completada : false , fechalimite : fechalimiterecibida });
+function agregarTarea(nombreRecibido, fechaLimiteRecibida = null){
+    tareas.push({nombre : nombreRecibido , completada : false , fechaLimite : fechaLimiteRecibida });
     console.log("tarea agregada");
 }
 
 //funcion para eliminar tarea
-function eliminartarea(indice){
+function eliminarTarea(indice){
     if(indice >= 0 && indice < tareas.length){
         tareas.splice(indice, 1);
         console.log("tarea eliminada");
@@ -37,7 +41,7 @@ function eliminartarea(indice){
 }
 
 //funcion para marcar tarea completada
-function completartarea(indice){
+function completarTarea(indice){
     if(indice >= 0 && indice < tareas.length){
         tareas[indice].completada = true;
         console.log("task done");
@@ -47,11 +51,11 @@ function completartarea(indice){
 }
 
 //afuncion para modificar una tarea
-function modtarea(indice, nuevonombre, nuevafechalimite = null){
+function modTarea(indice, nuevoNombre, nuevaFechaLimite = null){
     if(indice >= 0 && indice < tasks.length){
-        tareas[indice].nombre = nuevonombre;
-        if(nuevafechalimite !== null){
-            tareas[indice].fechalimite = nuevafechalimite;
+        tareas[indice].nombre = nuevoNombre;
+        if(nuevaFechaLimite !== null){
+            tareas[indice].fechaLimite = nuevaFechaLimite;
         }
         console.log("Task modified");
     }else{
@@ -84,23 +88,23 @@ function UserApp(){
         switch (opcion){
             case 1:
                 let nombreTareaNueva = prompt("Ingrese el nombre de la tarea a cargar: ");
-                agregartarea(nombreTareaNueva);
+                agregarTarea(nombreTareaNueva);
                 break;
 
             case 2:
                 let indiceAEliminar = parseInt(prompt("Ingrese el indice de la tarea a eliminar: "));
-                eliminartarea(indiceAEliminar);
+                eliminarTarea(indiceAEliminar);
                 break;
 
             case 3:
                 let indiceACompletar = parseInt(prompt("Ingrese el indice de la tarea completada: "));
-                completartarea(indiceACompletar);
+                completarTarea(indiceACompletar);
                 break;
 
             case 4:
                 let indice = parseInt(prompt("Ingrese el indice a modificar: "));
-                let nuevonombre = prompt("Ingrese el nuevo nombre de la tarea: ");
-                modtarea(indice, nuevonombre);
+                let nuevoNombre = prompt("Ingrese el nuevo nombre de la tarea: ");
+                modTarea(indice, nuevoNombre);
                 break;
 
             case 5:
@@ -109,12 +113,12 @@ function UserApp(){
                 break;
 
             case 6:
-                mostrarcategorias();
+                mostrarCategorias();
                 break;
 
             case 7:
-                let nuevacategoria = prompt("Ingrese el nombre de la nueva categoria: ");
-                agregarcategoria(nuevacategoria);
+                let nuevaCategoria = prompt("Ingrese el nombre de la nueva categoria: ");
+                agregarCategoria(nuevaCategoria);
                 break;
 
             default:
