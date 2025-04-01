@@ -35,4 +35,20 @@ console.table(ejemplo)
 // }
 
 
-// recorrer la totalidad de datos de la matris filas + columnas  //
+// recorrer la totalidad de datos de la matris filas + columnas //
+
+for (let i = 0; i < ejemplo.length; i++) {   //este for recorre las filas //
+    for (let j = 0; j <ejemplo.length; j++){
+        console.log(ejemplo[i][j])          //recorre las columnas //
+    }
+}
+
+// filtrar dentro de matrices //
+
+for (let i = 0; i < ejemplo.length; i++) {
+    for (let j = 0; j <ejemplo.length ; j++){
+        if(ejemplo[i][j] % 2 == 0){
+            console.log(ejemplo[i][j])
+        }
+    }
+}
