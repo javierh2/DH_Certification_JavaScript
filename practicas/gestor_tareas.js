@@ -24,48 +24,47 @@ function agregarCategoria(nombreCategoria){
     console.log("categoria " + nombreCategoria + " agregado correctamente");
 }
 
-//funcion para agregar una nueva tarea al array
+// funcion para agregar una nueva tarea al array
 function agregarTarea(nombreRecibido, fechaLimiteRecibida = null){
     tareas.push({nombre : nombreRecibido , completada : false , fechaLimite : fechaLimiteRecibida });
     console.log("tarea agregada");
 }
 
-//funcion para eliminar tarea
+// funcion para eliminar tarea
 function eliminarTarea(indice){
     if(indice >= 0 && indice < tareas.length){
         tareas.splice(indice, 1);
         console.log("tarea eliminada");
     }else{
-        console.log("index wrong, please enter a correct one");
+        console.log("indice erroneo, ingrese un indice de tarea existente");
     }
 }
 
-//funcion para marcar tarea completada
+// funcion para marcar tarea completada
 function completarTarea(indice){
     if(indice >= 0 && indice < tareas.length){
         tareas[indice].completada = true;
-        console.log("task done");
+        console.log("tarea completada");
     }else{
-        console.log("index wrong");
+        console.log("indice erroneo, ingrese un indice de tarea existente");
     }
 }
 
-//afuncion para modificar una tarea
+// funcion para modificar una tarea específica
 function modTarea(indice, nuevoNombre, nuevaFechaLimite = null){
-    if(indice >= 0 && indice < tasks.length){
+    if(indice >= 0 && indice < tareas.length){
         tareas[indice].nombre = nuevoNombre;
         if(nuevaFechaLimite !== null){
             tareas[indice].fechaLimite = nuevaFechaLimite;
         }
-        console.log("Task modified");
+        console.log("tarea modificada exitosamente");
     }else{
-        console.log("index wrong, please enter a correct one");
+        console.log("indice erroneo, ingrese un indice de tarea existente");
     }
-
 }
 
 //funcion para mostrar el menu
-function showMenu(){
+function mostrarMenu(){
     console.log("-- Menu --");
     console.log("1- Agregar tarea");
     console.log("2- Eliminar tarea");
@@ -82,7 +81,7 @@ function UserApp(){
     let opcion = -1;
 
     while(opcion != 0){
-        showMenu();
+        mostrarMenu();
         opcion = parseInt(prompt("Ingrese la opción deseada: "));
 
         switch (opcion){
@@ -122,7 +121,7 @@ function UserApp(){
                 break;
 
             default:
-                console.log("opcion inválida");
+                console.log("App de notas se despide");
                 break;
         }
     }
