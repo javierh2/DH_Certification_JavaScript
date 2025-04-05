@@ -67,3 +67,27 @@
 // }
 
 // convertirDinero(100, "peruano")
+
+// ej 4 - evaluador de edad //
+
+// function evaluarEdad(edad) {
+//     if (edad < 12) {
+//         console.log("niño")
+//     }else if(edad < 18){
+//         console.log("adolescente")
+//     }else{
+//         console.log("mayor de edad")
+//     }
+// }
+
+// evaluarEdad(20)
+
+
+// ej 5 - generador de msj personalizados //
+
+// function generadorMensaje(nombre,momentoDia) {
+//     let saludo = (momentoDia === "mañana") ? "buenos dias" : "buenas tardes"
+//     console.log(`${saludo}, ${nombre}!`)
+// }
+
+// generadorMensaje("javier", "mañana")
