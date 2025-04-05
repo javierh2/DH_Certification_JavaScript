@@ -11,5 +11,5 @@ function validador(contraseñaRecibida) {
     }
 }
 
-let test = validador(pepe)
+let test = validador("miContraseña")
 console.log(test)
