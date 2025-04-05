@@ -20,9 +20,17 @@
 
 // .reduce() recorre la totalidad del arreglo y devuelve un unico valor //
 
-let nums = [2,4,6,8,0,,15,654,4566,432432432]
-let suma = nums.reduce(function (acumulador,num) {
-    return acumulador + num
-})
+// let nums = [2,4,6,8,0,,15,654,4566,432432432]
+// let suma = nums.reduce(function (acumulador,num) {
+//     return acumulador + num
+// })
 
-console.log(suma)
+// console.log(suma)
+
+// .forEach() itera sobre un array no retorna nada se elige el comportamiento con el callbacks //
+
+let paises = ["arg", "col", "bra"]
+
+paises.forEach(function(pais){
+    console.log(pais + "2")
+})
