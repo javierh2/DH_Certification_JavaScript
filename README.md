@@ -62,10 +62,10 @@
 
 14. Objetos en JavaScript y Módulos
 
-### Proyectos
+## Proyectos
 Incluye dos proyectos y están realizados en HTML, CSS y JS, para acceder al código fuentes están en la carpeta 'proyectos' aunque pueden acceder desde un Host
 
 1. Formulario de registro que contiene validaciones
-https://formulario-validacion-javascript-j.netlify.app/
+- (https://formulario-validacion-javascript-j.netlify.app/)
 2. Login a página que contiene validaciones y uso de LocalStorage para guardar un email de Usuario
-https://loginpage-javascript-test.netlify.app/
+- (https://loginpage-javascript-test.netlify.app/)
