@@ -6,12 +6,11 @@ document.addEventListener('DOMContentLoaded', function(){ // escucha el document
     const emailError = document.getElementById('emailError');
     const passwordError = document.getElementById('passwordError');
     const confirmPasswordError = document.getElementById('confirmPasswordError');
-    // const showHideButton = document.getElementById('show-hide')
+    const showHideButton = document.getElementById('show-hide')
 
     loginForm.addEventListener('submit', function(event){
         event.preventDefault()
         validateForm()
-
     })
 
     emailInput.addEventListener('blur',function(){  // blur cuando sale del formulario escucha el evento email
@@ -30,18 +29,30 @@ document.addEventListener('DOMContentLoaded', function(){ // escucha el document
         clearError(confirmPasswordError)
     })
 
+    // valida el formulario en su estado true
     function validateForm() {
         const isValidEmail = validateEmail()
         const isValidPassword = validatePassword()
         const passwordMatch = validateMatch()
 
         if (isValidEmail && isValidPassword && passwordMatch){ // guardo email en localStorage y genero un JSON en consola con los datos
-            alert('estás en la matrix')
-
+            saveLocalStorage()  // se llama a la funcion de localStore + JSON
+            alert('Haz ingresado con éxito')
         }
-
     }
 
+    // accion del botón mostrar / ocultar
+    showHideButton.addEventListener('click',function(){
+        if(passwordInput.type == 'password'){
+            passwordInput.type = 'text'
+            confirmPasswordInput.type = 'text'
+        }else{
+            passwordInput.type = 'password'
+            confirmPasswordInput.type = 'password'
+        }
+    })
+
+    //callbacks
     function validateEmail() {
         const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/
         const emailValue = emailInput.value.trim()  // limpia espacios vacios al inicio y fin del input
@@ -71,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function(){ // escucha el document
         return true
     }
 
+    // mensajes de error
     function showError(errorElement, message) {
         errorElement.innerHTML = message;
         errorElement.style.display = 'block';
@@ -79,6 +91,21 @@ document.addEventListener('DOMContentLoaded', function(){ // escucha el document
     function clearError(errorElement) {
         errorElement.innerHTML = '';
         errorElement.style.display = 'none';
+    }
+
+    // guardado en localStorage y genera un JSON
+    function saveLocalStorage(){
+        const emailValue = emailInput.value.trim()
+        localStorage.setItem('email', emailValue)  //guarda en el localStorage el email
+        const body = bodyBuilderJSON()             // se genera un console log del body con el json creado
+        console.log(body)
+    }
+
+    function bodyBuilderJSON(){
+        return {
+            "email":emailInput.value,
+            "password":passwordInput.value
+        }
     }
 
 })
