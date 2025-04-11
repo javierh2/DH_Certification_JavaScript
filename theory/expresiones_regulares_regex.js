@@ -1,0 +1,1 @@
+// secuencia de caracteres que forman un patrón de busquedas para hacer testeos o busquedas en si
