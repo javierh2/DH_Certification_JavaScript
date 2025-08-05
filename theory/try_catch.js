@@ -14,10 +14,10 @@ const myFun = () =>{
     let num = document.getElementById('input').value // seleccion contenido del input
     try {
         if(num.trim() == '') throw 'vacio'
-        if(isNaN(num))throw 'no es un numero'
+        if(isNaN(num)) throw 'no es un numero'
         num = Number(num)
-        if(num < 1)throw 'muy bajo'
-        if(num > 10)throw 'muy alto'
+        if(num < 1) throw 'muy bajo'
+        if(num > 10) throw 'muy alto'
         message.innerHTML = 'el dato ingreasado es: ' + num
     } catch (error) {
         message.innerHTML = 'el dato ingreaso es: ' + error
