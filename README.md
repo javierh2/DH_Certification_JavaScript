@@ -20,10 +20,12 @@
 - If Ternario
 - Switch
 4. Arrays y Métodos de arrays // Strings y Métodos de strings
+
 5. Ciclos y Búcles
 - While / do while
 - For loop
 6. Objetos Literales y JSON
+
 7. Matrices
 - Definición, casos de uso y Doble for
 - Recorrer matrices
