@@ -51,7 +51,7 @@
 14. Objetos en JavaScript y Módulos
 
 ## Proyectos
-Incluye dos proyectos que están realizados con HTML, CSS y JS, para acceder al código fuentes están en la carpeta 'projects' aunque pueden acceder desde un Host
+Incluye dos proyectos que están realizados con HTML, CSS y JS, para acceder al código fuentes están en la carpeta 'project' aunque pueden acceder desde un Host
 
 1. Formulario de registro que contiene validaciones
 - https://form-registro-js.netlify.app/
