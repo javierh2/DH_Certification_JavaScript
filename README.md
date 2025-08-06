@@ -50,6 +50,7 @@
 - Promesas
 - Manejo de JS asincrónico: Fetch, Async/Await, manejor de errores
 13. Expresiones regulares y buenas prácticas
+
 14. Objetos en JavaScript y Módulos
 
 ## Proyectos
